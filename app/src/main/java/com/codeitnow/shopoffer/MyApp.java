@@ -53,9 +53,9 @@ public class MyApp extends Application implements BeaconConsumer {
         super.onCreate();
         instance = this;
         //check signed in
-        //if (UserUtil.isUserLoggedIn()) {
+    //    if (UserUtil.isUserLoggedIn()) {
             setUpBeacon();
-        //}
+      //  }
     }
 
     public void setUpBeacon(){
@@ -63,13 +63,13 @@ public class MyApp extends Application implements BeaconConsumer {
         regionList = new CopyOnWriteArrayList<>();
         regionNameList = new CopyOnWriteArrayList<>();
 
-        ssnRegionMap.put("0x0117c59825E9",new Region("Test Room",nameSpaceId, Identifier.parse("0x0117c59825E9"),null));
-        ssnRegionMap.put("0x0117c55be3a8",new Region("Git Room",nameSpaceId,Identifier.parse("0x0117c55be3a8"),null));
-        ssnRegionMap.put("0x0117c552c493",new Region("Android Room",nameSpaceId,Identifier.parse("0x0117c552c493"),null));
-        ssnRegionMap.put("0x0117c55fc452",new Region("iOS Room",nameSpaceId,Identifier.parse("0x0117c55fc452"),null));
-        ssnRegionMap.put("0x0117c555c65f",new Region("Python Room",nameSpaceId,Identifier.parse("0x0117c555c65f"),null));
-        ssnRegionMap.put("0x0117c55d6660",new Region("Office",nameSpaceId,Identifier.parse("0x0117c55d6660"),null));
-        ssnRegionMap.put("0x0117c55ec086",new Region("Ruby Room",nameSpaceId,Identifier.parse("0x0117c55ec086"),null));
+        ssnRegionMap.put("0x0117c59825E9",new Region("1",nameSpaceId, Identifier.parse("0x0117c59825E9"),null));
+        ssnRegionMap.put("0x0117c55be3a8",new Region("2",nameSpaceId,Identifier.parse("0x0117c55be3a8"),null));
+        ssnRegionMap.put("0x0117c552c493",new Region("3",nameSpaceId,Identifier.parse("0x0117c552c493"),null));
+        ssnRegionMap.put("0x0117c55fc452",new Region("4",nameSpaceId,Identifier.parse("0x0117c55fc452"),null));
+        ssnRegionMap.put("0x0117c555c65f",new Region("5",nameSpaceId,Identifier.parse("0x0117c555c65f"),null));
+        ssnRegionMap.put("0x0117c55d6660",new Region("6",nameSpaceId,Identifier.parse("0x0117c55d6660"),null));
+        ssnRegionMap.put("0x0117c55ec086",new Region("7",nameSpaceId,Identifier.parse("0x0117c55ec086"),null));
 
         beaconManager = BeaconManager.getInstanceForApplication(this);
         beaconManager.getBeaconParsers().add(new BeaconParser().

@@ -10,7 +10,6 @@ import android.util.Log;
 import com.codeitnow.shopoffer.network.ApiClient;
 import com.codeitnow.shopoffer.network.NetworkDataManager;
 import com.codeitnow.shopoffer.network.responses.ApiResponse;
-import com.codeitnow.shopoffer.utils.UserUtil;
 
 import org.altbeacon.beacon.BeaconConsumer;
 import org.altbeacon.beacon.BeaconManager;
@@ -35,7 +34,6 @@ public class MyApp extends Application implements BeaconConsumer {
     private static MyApp instance = null;
     private BeaconManager beaconManager;
     private static final Identifier nameSpaceId = Identifier.parse("0x5dc33487f02e477d4058");
-
     public CopyOnWriteArrayList<String> regionNameList;
     public CopyOnWriteArrayList<Region> regionList;
     public HashMap<String,Region> ssnRegionMap;
@@ -55,9 +53,9 @@ public class MyApp extends Application implements BeaconConsumer {
         super.onCreate();
         instance = this;
         //check signed in
-        if (UserUtil.isUserLoggedIn()) {
+        //if (UserUtil.isUserLoggedIn()) {
             setUpBeacon();
-        }
+        //}
     }
 
     public void setUpBeacon(){
